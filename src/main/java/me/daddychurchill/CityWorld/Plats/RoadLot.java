@@ -23,7 +23,7 @@ public class RoadLot extends ConnectedLot {
     private final static int fenceHeight = 2;
 
     private final static Material lightpostbaseMaterial = Material.STONE;
-    private final static Material lightpostMaterial = Material.SPRUCE_FENCE;
+    private final static Material lightpostMaterial = Material.IRON_BARS;
 
     public final static Material sewerMaterial = Material.SMOOTH_STONE;
     private final static Material sewerFloor = Material.STONE_BRICKS;
@@ -865,13 +865,13 @@ public class RoadLot extends ConnectedLot {
                 }
 
 //				int offset = inACity ? 2 : 1;
-//				
+//
 //				// wall to the east/west
 //				if (roads.toWest() && roads.toEast()) {
-//					
+//
 //					// carve out the tunnel
 //					chunk.airoutBlocks(generator, 0, 16, pavementLevel + offset, pavementLevel + tunnelHeight + 2, 0, 16);
-//					
+//
 //					// walls please, this will find the Y the hard way since we are looking at the next chunk over
 //					for (int x = 0; x < chunk.width; x++) {
 //						placeRetainingWall(chunk, x, 0, pavementLevel + 1, generator.getFarBlockY(originX + x, originZ - 1));
@@ -1410,14 +1410,14 @@ public class RoadLot extends ConnectedLot {
         else if (dirtroadIsClay)
             chunk.setBlocks(x1, x2, y, z1, z2, dirtroadClay);
         else {
-//				pepperPlants(generator, chunk, x1, x2, y, z1, z2, Odds.oddsLikely, 
+//				pepperPlants(generator, chunk, x1, x2, y, z1, z2, Odds.oddsLikely,
 //						doingFolage ? Material.BONE_BLOCK : Material.DIAMOND_BLOCK, doingTunnel);
             pepperPlants(generator, chunk, x1, x2, y, z1, z2, Odds.oddsVeryLikely, dirtroadMat, doingFolage,
                     doingTunnel);
         }
-//		
-//		
-//			else if (doingFolage) 
+//
+//
+//			else if (doingFolage)
 ////				pepperPlants(generator, chunk, x1, x2, y, z1, z2, Odds.oddsSomewhatLikely, dirtroadMat, doingTunnel);
 //				pepperPlants(generator, chunk, x1, x2, y, z1, z2, Odds.oddsSomewhatLikely, Material.BONE_BLOCK, doingTunnel);
 //			else

@@ -78,7 +78,7 @@ public abstract class DataContext {
 
         // lights?
         if (generator.getSettings().includeWorkingLights) {
-            lightMat = Material.GLOWSTONE;
+            lightMat = Material.LANTERN;
             torchMat = Material.TORCH;
         } else {
             lightMat = Material.REDSTONE_LAMP;
